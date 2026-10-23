@@ -1,0 +1,72 @@
+import type { Inputs } from './engine/types';
+
+export const DEFAULTS: Inputs = {
+  price: 350000,
+  agencyFees: 0,
+  renovation: 0,
+  dmtoRate: 5.80665,
+  notaryDisbursements: 1500,
+  propertyChargesYearly: 5000,
+  appreciation: 1.5,
+
+  brokerFee: 3000,
+  bankFee: 1000,
+  guaranteeType: 'caution',
+  cautionCommission: 0.5,
+  cautionFmg: 0.8,
+  cautionFmgRefund: 75,
+  hypothequeRate: 1.5,
+
+  loanRate: 3.2,
+  loanYears: 20,
+  insRate1: 0.1,
+  insRate2: 0.1,
+  quotite1: 100,
+  quotite2: 100,
+  prepayMonthly: 0,
+
+  gross1: 100000,
+  gross2: 0,
+  netFactor: 77.5,
+  taxJointly: true,
+  salaryGrowth: 1.5,
+  livingCosts: 1600,
+  vacation: 1000,
+
+  buckets: [
+    { id: 'savings1', name: 'Savings account', balance: 120000, rate: 3.5, regime: 'pfu', eligible: true },
+    { id: 'livret1', name: 'Livret A', balance: 20000, rate: 1.5, regime: 'livret', eligible: true },
+    { id: 'livret2', name: 'LDDS', balance: 10000, rate: 1.5, regime: 'livret', eligible: true },
+    { id: 'savings2', name: 'Term deposit', balance: 50000, rate: 2, regime: 'pfu', eligible: true },
+    { id: 'pee', name: 'Company savings (PEE)', balance: 25000, rate: 5, regime: 'pee', eligible: true },
+    { id: 'retirement', name: 'Retirement savings', balance: 40000, rate: 5, regime: 'untaxed', eligible: false },
+    { id: 'av', name: 'Assurance vie', balance: 20000, rate: 3, regime: 'pfu', eligible: false },
+  ],
+  emergencyFund: 20000,
+  reinvestLeftover: true,
+
+  etfReturn: 7,
+  etfVol: 16,
+  envelope: 'pea',
+  peaCap: 150000,
+  socialRate: 18.6,
+  pfuRate: 31.4,
+  inflation: 2,
+  horizonYears: 20,
+  horizonFollowsLoan: true,
+
+  currentAge: 35,
+  endAge: 90,
+  pensionAge: 64,
+  pensionMonthly: 0,
+  fireStep: 10,
+
+  scenarios: [
+    { id: 'a', name: 'Fees only', mode: 'fees', value: 0 },
+    { id: 'b', name: '20% down', mode: 'percent', value: 20 },
+    { id: 'c', name: '40% down', mode: 'percent', value: 40 },
+    { id: 'd', name: 'Max apport', mode: 'max', value: 0 },
+  ],
+  mcEnabled: false,
+  mcRuns: 1000,
+};
